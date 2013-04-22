@@ -1,0 +1,13 @@
+Data description
+---
+name:
+  Jõusolevad aadressiobjektid koos aadressidega
+sources:
+  - name: tallinn
+    url: http://xgis.maaamet.ee/adsavalik/xads?Fh0tcfST
+    local-file: data/jous-tallinn.csv
+    records: 2611624
+  - name: all
+    url: http://xgis.maaamet.ee/adsavalik/xads?FOsT60Au
+    local-file: data/jous-all.csv
+    records: 166523929

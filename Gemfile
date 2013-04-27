@@ -21,7 +21,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'slim'
 
+group :test, :development do
+  gem 'minitest-rails'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

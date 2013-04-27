@@ -26,6 +26,7 @@ gem 'slim'
 group :test, :development do
   gem 'minitest-rails'
   gem 'minitest-reporters'
+  gem 'guard-minitest'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

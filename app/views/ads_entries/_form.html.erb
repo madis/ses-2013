@@ -1,0 +1,57 @@
+<%= form_for(@ads_entry) do |f| %>
+  <% if @ads_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ads_entry.errors.count, "error") %> prohibited this ads_entry from being saved:</h2>
+
+      <ul>
+      <% @ads_entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :adob_id %><br />
+    <%= f.number_field :adob_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ads_oid %><br />
+    <%= f.text_field :ads_oid %>
+  </div>
+  <div class="field">
+    <%= f.label :orig_tunnus %><br />
+    <%= f.number_field :orig_tunnus %>
+  </div>
+  <div class="field">
+    <%= f.label :ads_kehtiv %><br />
+    <%= f.datetime_select :ads_kehtiv %>
+  </div>
+  <div class="field">
+    <%= f.label :olek %><br />
+    <%= f.text_field :olek %>
+  </div>
+  <div class="field">
+    <%= f.label :adr_id %><br />
+    <%= f.number_field :adr_id %>
+  </div>
+  <div class="field">
+    <%= f.label :taisaadress %><br />
+    <%= f.text_field :taisaadress %>
+  </div>
+  <div class="field">
+    <%= f.label :lahiaadress %><br />
+    <%= f.text_field :lahiaadress %>
+  </div>
+  <div class="field">
+    <%= f.label :viitepunkt_x %><br />
+    <%= f.text_field :viitepunkt_x %>
+  </div>
+  <div class="field">
+    <%= f.label :viitepunkt_y %><br />
+    <%= f.text_field :viitepunkt_y %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,6 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130427131531) do
+
+  create_table "ads_entries", :force => true do |t|
+    t.integer  "adob_id"
+    t.string   "ads_oid"
+    t.integer  "orig_tunnus"
+    t.datetime "ads_kehtiv"
+    t.string   "olek"
+    t.integer  "adr_id"
+    t.string   "taisaadress"
+    t.string   "lahiaadress"
+    t.float    "viitepunkt_x"
+    t.float    "viitepunkt_y"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
 end

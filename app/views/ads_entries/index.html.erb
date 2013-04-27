@@ -1,0 +1,41 @@
+<h1>Listing ads_entries</h1>
+
+<table>
+  <tr>
+    <th>Adob</th>
+    <th>Ads oid</th>
+    <th>Orig tunnus</th>
+    <th>Ads kehtiv</th>
+    <th>Olek</th>
+    <th>Adr</th>
+    <th>Taisaadress</th>
+    <th>Lahiaadress</th>
+    <th>Viitepunkt x</th>
+    <th>Viitepunkt y</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ads_entries.each do |ads_entry| %>
+  <tr>
+    <td><%= ads_entry.adob_id %></td>
+    <td><%= ads_entry.ads_oid %></td>
+    <td><%= ads_entry.orig_tunnus %></td>
+    <td><%= ads_entry.ads_kehtiv %></td>
+    <td><%= ads_entry.olek %></td>
+    <td><%= ads_entry.adr_id %></td>
+    <td><%= ads_entry.taisaadress %></td>
+    <td><%= ads_entry.lahiaadress %></td>
+    <td><%= ads_entry.viitepunkt_x %></td>
+    <td><%= ads_entry.viitepunkt_y %></td>
+    <td><%= link_to 'Show', ads_entry %></td>
+    <td><%= link_to 'Edit', edit_ads_entry_path(ads_entry) %></td>
+    <td><%= link_to 'Destroy', ads_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ads entry', new_ads_entry_path %>

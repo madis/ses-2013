@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Adob:</b>
+  <%= @ads_entry.adob_id %>
+</p>
+
+<p>
+  <b>Ads oid:</b>
+  <%= @ads_entry.ads_oid %>
+</p>
+
+<p>
+  <b>Orig tunnus:</b>
+  <%= @ads_entry.orig_tunnus %>
+</p>
+
+<p>
+  <b>Ads kehtiv:</b>
+  <%= @ads_entry.ads_kehtiv %>
+</p>
+
+<p>
+  <b>Olek:</b>
+  <%= @ads_entry.olek %>
+</p>
+
+<p>
+  <b>Adr:</b>
+  <%= @ads_entry.adr_id %>
+</p>
+
+<p>
+  <b>Taisaadress:</b>
+  <%= @ads_entry.taisaadress %>
+</p>
+
+<p>
+  <b>Lahiaadress:</b>
+  <%= @ads_entry.lahiaadress %>
+</p>
+
+<p>
+  <b>Viitepunkt x:</b>
+  <%= @ads_entry.viitepunkt_x %>
+</p>
+
+<p>
+  <b>Viitepunkt y:</b>
+  <%= @ads_entry.viitepunkt_y %>
+</p>
+
+
+<%= link_to 'Edit', edit_ads_entry_path(@ads_entry) %> |
+<%= link_to 'Back', ads_entries_path %>

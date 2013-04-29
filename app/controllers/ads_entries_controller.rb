@@ -1,4 +1,7 @@
 class AdsEntriesController < ApplicationController
+
+  def search
+  end
   # GET /ads_entries
   # GET /ads_entries.json
   def index

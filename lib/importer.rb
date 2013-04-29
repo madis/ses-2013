@@ -3,10 +3,11 @@ require 'csv'
 class Importer
   def import(data)
 
-    parsed_csv = CSV.parse data, headers: true, return_headers: true, col_sep: ';'
+    parsed_csv = CSV.parse data, headers: true, col_sep: ';'
     # binding.pry
     {
-      headers: parsed_csv.headers.map {|header| header.downcase.to_sym }
+      headers: parsed_csv.headers.map {|header| header.downcase.to_sym },
+      rows: []
     }
   end
   # def import(filename)
@@ -19,5 +20,5 @@ class Importer
   #   p 'Import done!'
   # end
 end
-c = CSV.parse "tere,hommikust", headers: true, return_headers: true do |row| p "#{row.headers}" end
-c = CSV.parse "tere,hommikust", headers: true do |row| p "#{row.headers}" end
+
+CSV.parse "nimi;\n\"Madis Nõmme\"", headers: true, return_headers: true, col_sep: ';'

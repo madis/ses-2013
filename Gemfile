@@ -20,9 +20,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'slim'
+gem 'slim-rails'
 gem 'activerecord-import'
-gem 'thinking-sphinx'
+gem 'thinking-sphinx' # For full-text searching
+gem 'mysql2' # Sphinx uses it for it's communication. For DB postgres is used
 
 group :test, :development do
   gem 'sqlite3'

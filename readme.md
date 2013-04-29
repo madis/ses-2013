@@ -56,7 +56,11 @@ Kehtivad ja ootel olekus aadresiobjektid ning nendega seotud aadressid. Kui obje
 ```
 
 ### Getting started
-
+0. Get dependencies
+```bash
+# Sphinx with mysql support (required even if using w/ postgres)
+brew install sphinx --mysql
+```
 1. Get ruby & rails (```$ \curl -L https://get.rvm.io | bash -s stable --autolibs=3 --rails```)
 2. ```bundle```
 3. Import data ```rake adb:import_data[1_1.04.2013_00001_784_1.csv]```

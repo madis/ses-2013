@@ -1,6 +1,6 @@
 class SearchesController < ApplicationController
   def regular
-    @ads_entries = AdsEntry.search(params[:search])
+    @ads_entries = AdsEntry.simple_search params[:search]
   end
 
   def index

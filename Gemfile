@@ -12,9 +12,10 @@ gem 'pg'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+  gem 'less-rails'
+  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -22,7 +23,7 @@ end
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'activerecord-import'
-gem 'thinking-sphinx' # For full-text searching
+gem 'thinking-sphinx', git: 'git://github.com/pat/thinking-sphinx.git'
 gem 'mysql2' # Sphinx uses it for it's communication. For DB postgres is used
 
 group :test, :development do

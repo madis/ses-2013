@@ -38,3 +38,7 @@ dump.rdb
 # Ignore sublime user-specific files
 /backend-web.sublime-project
 /backend-web.sublime-workspace
+
+/data/~*
+/db/sphinx
+/data/1_1.04.2013_00001_1.csv

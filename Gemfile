@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'slim'
+gem 'activerecord-import'
 
 group :test, :development do
   gem 'minitest-rails'

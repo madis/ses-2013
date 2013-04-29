@@ -1,7 +1,8 @@
 AdsMatcher::Application.routes.draw do
-  get "home/index"
+  resources :ads_entries do
+    get 'search'
+  end
 
-  resources :ads_entries
 
 
   # The priority is based upon order of creation:

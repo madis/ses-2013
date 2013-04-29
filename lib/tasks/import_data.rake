@@ -5,6 +5,6 @@ namespace :adb do
   #For example rake adb:import_data[136_rows.csv]
   task :import_data, [:filename] => :environment do |t, args|
     puts 'Importing...'
-    Importer.new.import (args.filename)
+    Importer.new.import args.filename
   end
 end

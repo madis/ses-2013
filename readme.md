@@ -54,3 +54,13 @@ Kehtivad ja ootel olekus aadresiobjektid ning nendega seotud aadressid. Kui obje
 - tase8_nimetus (string)
 - tase8_nimetus_liigiga (string)
 ```
+
+### Getting started
+
+1. Get ruby & rails (```$ \curl -L https://get.rvm.io | bash -s stable --autolibs=3 --rails```)
+2. ```bundle```
+3. Import data ```rake adb:import_data[1_1.04.2013_00001_784_1.csv]```
+> This is the smaller dataset.
+4. Run the server ```rails server```
+5. Make some [searches](http://localhost:3000/)
+

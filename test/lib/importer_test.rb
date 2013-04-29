@@ -28,3 +28,6 @@ describe Importer do
 end
 
 # Parse manually
+# CSV.parse CSV_SAMPLE, :quote_char => '"', :headers => true,  :header_converters => :symbol, :col_sep => ';', encoding: 'iso-8859-1'
+# Date parsing (of ads_kehtiv)
+# DateTime.strptime(date_str, '%d.%m.%Y %H:%M:%S')

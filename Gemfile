@@ -22,6 +22,7 @@ end
 gem 'jquery-rails'
 gem 'slim'
 gem 'activerecord-import'
+gem 'thinking-sphinx'
 
 group :test, :development do
   gem 'sqlite3'

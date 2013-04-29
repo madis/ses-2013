@@ -6,3 +6,35 @@ data/jous-tallinn.csv
 db/*.sqlite3
 /log/*
 /tmp/*
+
+# Ignore OS X folder junk
+.DS_Store
+
+# Ignore bundler config
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# Ignore the redis database file
+dump.rdb
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp
+/tmp/*
+.tags
+.gemtags
+.idea
+.sass-cache
+
+# Generated assets in public folder
+/public/assets
+/public/client
+
+# Ignore test coverage results
+/coverage
+
+# Ignore sublime user-specific files
+/backend-web.sublime-project
+/backend-web.sublime-workspace

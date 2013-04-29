@@ -1,6 +1,7 @@
 AdsMatcher::Application.routes.draw do
-  resources :ads_entries do
-    get 'search'
+  resources :ads_entries
+  resource :searches do
+    get 'regular'
   end
 
 

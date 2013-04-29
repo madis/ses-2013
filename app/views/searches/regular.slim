@@ -1,0 +1,12 @@
+h1 Regular search
+
+= form_tag regular_searches_path, :method => 'get' do
+  p
+  = text_field_tag :search, params[:search]
+  = submit_tag 'Search', :name => nil
+
+- unless @ads_entries.nil?
+    table
+      - for ads_entry in @ads_entries do
+        tr
+          td = ads_entry.taisaadress

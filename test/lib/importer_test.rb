@@ -21,7 +21,10 @@ CSV_SYM_HEADER = [:adob_id, :ads_oid, :adob_liik, :orig_tunnus, :etak_id,
 
 describe Importer do
   it 'associates keys with values' do
-    imported = Importer.new CSV_SAMPLE
-
+    importer = Importer.new :nimi, :vanus
+    imported = importer.import 'nimi;vanus\n"Volli";55'
+    imported.must
   end
 end
+
+# Parse manually

@@ -21,10 +21,11 @@ class Importer
 
     CSV.foreach(Rails.root.join('data', filename), :quote_char => '"', :headers => true,  :header_converters => :symbol, :col_sep => ';', encoding: 'iso-8859-1')  do |row|
       selected_values = row.to_hash.slice(:adob_id, :adr_id, :ads_kehtiv, :ads_oid, :lahiaadress, :oled, :orig_tunnus, :taisaadress, :viitepunkt_x, :viitepunkt_y)
+      selected_values[:ads_kehtiv] = DateTime.strptime(selected_values[:ads_kehtiv], '%d.%m.%Y %H:%M:%S')
       row_data << AdsEntry.new(selected_values)
       row_counter += 1
       total_counter += 1
-      if row_counter > 499
+      if row_counter > 2000
         measure = Benchmark.measure { AdsEntry.import row_data }
         p "#{total_counter} items #{measure}"
         row_counter = 0

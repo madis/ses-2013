@@ -71,4 +71,6 @@ brew install sphinx --mysql
 ### Using elasticsearch
 
 1. Install [elasticsearch](http://www.elasticsearch.org/). ```brew install elasticsearch```
-2. Run it ```elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml```
+2. Create indexes for elasticsearch: ```rake tire:import:all```
+3. Run it ```elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml```
+

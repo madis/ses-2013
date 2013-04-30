@@ -3,7 +3,8 @@ AdsMatcher::Application.routes.draw do
   resource :searches do
     get 'regular'
     get 'sphinx'
+    get 'elastic'
   end
 
-  root :to => 'home#index'
+  root :to => 'searches#index'
 end

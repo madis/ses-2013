@@ -6,4 +6,22 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
-    == yield
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          .brand SES-2013
+          button.btn.btn-navbar
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          .nav-collapse.collapse
+            ul.nav
+              li[class="#{active?('regular')}"]
+                = link_to 'Simple SQL', regular_searches_path
+              li[class="#{active?('sphinx')}"]
+                = link_to 'Sphinx', sphinx_searches_path
+              li[class="#{active?('elastic')}"]
+                = link_to 'Elasticsearch', elastic_searches_path
+
+    .container
+      == yield

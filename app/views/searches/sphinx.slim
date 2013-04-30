@@ -1,10 +1,4 @@
-h1 Regular search
+h1 Sphinx search
 
-= form_tag sphinx_searches_path, :method => 'get' do
-  = text_field_tag :search, params[:search]
-  = submit_tag 'Search', :name => nil
-- unless @ads_entries.nil?
-    table
-      - for ads_entry in @ads_entries do
-        tr
-          td = ads_entry.taisaadress
+= render partial: 'search_form', locals: {search_url: sphinx_searches_path}
+= render partial: 'search_results'

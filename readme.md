@@ -6,7 +6,7 @@ MTAT.03.240 Seminar on Enterprise Software
 
 ### Task description
 
-The aim of this task is to build an address matching engine, which will take an address in a propriatory database in textual form such as "Papiniidu tn 13, Pärnu" and match it with structured records in the official ADS dataset (http://ads.maaamet.ee/). Validate the results with respect to the normalization results given by http://xgis.maaamet.ee/adsavalik/ads.
+The aim of this task is to build an address matching engine, which will take an address in a propriatory database in textual form such as "Papiniidu tn 13, Pärnu" and match it with structured records in the official ADS dataset (http://ads.maaamet.ee/). Validate the results with respect to the normalization results given by http://xgis.maaamet.ee/adsavalik/ads (pick Aadressiteksti normaliseerimine from the top menu) .
 
 ### Data
 
@@ -68,3 +68,7 @@ brew install sphinx --mysql
 4. Run the server ```rails server```
 5. Make some [searches](http://localhost:3000/)
 
+### Using elasticsearch
+
+1. Install [elasticsearch](http://www.elasticsearch.org/). ```brew install elasticsearch```
+2. Run it ```elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml```

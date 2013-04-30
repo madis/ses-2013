@@ -3,7 +3,9 @@ class AdsEntry < ActiveRecord::Base
 
   def self.simple_search(search)
     unless search.nil?
-      find(:all, :conditions => ['taisaadress LIKE ?', "%#{search}%"])
+      conditions = search.split(' ')
+      find(:all, :conditions => ['taisaadress ilike ? AND taisaadress ilike ? AND taisaadress ilike ? AND taisaadress ilike ? AND taisaadress ilike ?',
+                                 "%#{conditions[0]}%", "%#{conditions[1]}%", "%#{conditions[2]}%", "%#{conditions[3]}%", "%#{conditions[4]}%"])
     end
   end
 end

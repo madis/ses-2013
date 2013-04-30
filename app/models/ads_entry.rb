@@ -17,9 +17,9 @@ class AdsEntry < ActiveRecord::Base
     end
   end
 
-  def self.tire_search(params)
+  def self.tire_search(query)
     tire.search(load: true) do
-      query { string params[:query] if params[:query].present? }
+      query { string query if query.present? }
     end
   end
 end

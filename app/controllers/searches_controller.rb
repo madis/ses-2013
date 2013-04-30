@@ -8,6 +8,7 @@ class SearchesController < ApplicationController
   end
 
   def elastic
+    @ads_entries = AdsEntry.tire_search params[:search] if params[:search].present?
   end
 
   def index

@@ -2,4 +2,4 @@
     table.table-striped
       - for ads_entry in @ads_entries do
         tr
-          td = ads_entry.taisaadress
+          td = link_to ads_entry.taisaadress, ads_entry_path(ads_entry.id)

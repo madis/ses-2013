@@ -18,9 +18,4 @@ class SearchesController < ApplicationController
     render :index
   end
 
-  def active?(name)
-    'active' if params[:action] == name
-  end
-
-  helper_method :active?
 end
